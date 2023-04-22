@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            font-size: larger;
+
+            margin: 10px;
+            padding: 2px;
+            text-align: center;
+            background-image: url(unnamed.png);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: 12px;
+        }
+    </style>
+</head>
+
+<body background="unnamed">
+    <h1>Fill This form to
+        get a Full Detail of Tour</h1>
+    enter the starting of the Journey<input type="text" id="place1" /><br /><br />
+    enter the end of the Journey<input type="text" id="place2" /><br /><br />
+    Enter the Date :<input type="date" id="ate" /><br /><br />
+    <button onclick="compare()">submit</button><br /><br /><br /><br />
+
+    <div id="start"></div>
+    <div id="end"></div>
+    <div id="Date"></div>
+    <div id="Time"></div>
+    <div id="distance"></div>
+    <div id="Duration"></div>
+    <div id="money"></div>
+    <div id="para"></div>
+</body>
+<script>
+    function compare() {
+        let a = document.getElementById("place1").value;
+        let b = document.getElementById("place2").value;
+        let c = document.getElementById("ate").value;
+        var mon;
+        var start, end, Hour, Minute, distance, Duration;
+        if (a == "Goa" && b == "Baga") {
+            start = a;
+            end = b;
+            mon = 100;
+            Hour = 5;
+            Minute = 30;
+            distance = 2;
+            Duration = 0.10;
+        } else if (a == "Goa" && b == "Calangute") {
+            start = a;
+            end = b;
+            mon = 200;
+            Hour = 5;
+            Minute = 00;
+            distance = 3;
+            Duration = 0.15;
+        } else if (a == "Goa" && b == "Candolim") {
+            start = a;
+            end = b;
+            mon = 300;
+            Hour = 6;
+            Minute = 30;
+            distance = 8;
+            Duration = 0.20;
+        } else if (a == "Goa" && b == "Fort Aguda") {
+            start = a;
+            end = b;
+            mon = 400;
+            Hour = 6;
+            Minute = 00;
+            distance = 5;
+            Duration = 0.25;
+        } else if (a == "Goa" && b == "Dudhsagar Waterfall") {
+            start = a;
+            end = b;
+            mon = 600;
+            Hour = 6;
+            Minute = 30;
+            distance = 14;
+            Duration = 0.35;
+        } else if (a == "Goa" && b == "Anjuna Market") {
+            start = a;
+            end = b;
+            mon = 100;
+            Hour = 7;
+            Minute = 00;
+            distance = 4;
+            Duration = 0.15;
+        } else if (a == "Goa" && b == "Tito's Nightclub") {
+            start = a;
+            end = b;
+            mon = 200;
+            Hour = 7;
+            Minute = 30;
+            distance = 3;
+            Duration = 0.15;
+        } else if (a == "Goa" && b == "Divar Island") {
+            start = a;
+            end = b;
+            mon = 300;
+            Hour = 8;
+            Minute = 30;
+            distance = 23;
+            Duration = 0.30;
+        } else if (a == "Goa" && b == "Dona Paula") {
+            start = a;
+            end = b;
+            mon = 400;
+            Hour = 9;
+            Minute = 30;
+            distance = 15;
+            Duration = 0.20;
+        } else if (a == "Goa" && b == "Chapora Fort") {
+            start = a;
+            end = b;
+            mon = 600;
+            Hour = 10;
+            Minute = 30;
+            distance = 5;
+            Duration = 0.15;
+        } else if (a == "Goa" && b == "Mumbai") {
+            start = a;
+            end = b;
+            mon = 100;
+            Hour = 11;
+            Minute = 30;
+            distance = 200;
+            Duration = 49;
+        } else if (a == "Goa" && b == "Raipur") {
+            start = a;
+            end = b;
+            mon = 200;
+            Hour = 12;
+            Minute = 00;
+            distance = 250;
+            Duration = 50;
+        } else if (a == "Goa" && b == "Leh") {
+            start = a;
+            end = b;
+            mon = 300;
+            Hour = 12;
+            Minute = 30;
+            distance = 300;
+            Duration = 52;
+        } else if (a == "Goa" && b == "Noida") {
+            start = a;
+            end = b;
+            mon = 400;
+            Hour = 13;
+            Minute = 30;
+            distance = 350;
+            Duration = 54;
+        } else if (a == "Goa" && b == "Nagpur") {
+            start = a;
+            end = b;
+            mon = 500;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+        if (a == "Kashmir" && b == "Shankaracharya Hill") {
+            start = a;
+            end = b;
+            mon = 100;
+            Hour = 5;
+            Minute = 30;
+            distance = 2;
+            Duration = 0.10;
+        } else if (a == "Kashmir" && b == "Dal Lake") {
+            start = a;
+            end = b;
+            mon = 200;
+            Hour = 5;
+            Minute = 00;
+            distance = 3;
+            Duration = 0.15;
+        } else if (a == "Kashmir" && b == "Gulmarg Gondola") {
+            start = a;
+            end = b;
+            mon = 300;
+            Hour = 6;
+            Minute = 30;
+            distance = 8;
+            Duration = 0.20;
+        } else if (a == "Kashmir" && b == "Tulip Garden") {
+            start = a;
+            end = b;
+            mon = 400;
+            Hour = 6;
+            Minute = 00;
+            distance = 5;
+            Duration = 0.25;
+        } else if (a == "Kashmir" && b == "Apharwat Peak") {
+            start = a;
+            end = b;
+            mon = 500;
+            Hour = 6;
+            Minute = 30;
+            distance = 14;
+            Duration = 0.35;
+        } else if (a == "Kashmir" && b == "Sonmarg") {
+            start = a;
+            end = b;
+            mon = 100;
+            Hour = 7;
+            Minute = 00;
+            distance = 4;
+            Duration = 0.15;
+        } else if (a == "Kashmir" && b == "Nigeen Lake") {
+            start = a;
+            end = b;
+            mon = 200;
+            Hour = 7;
+            Minute = 30;
+            distance = 3;
+            Duration = 0.15;
+        } else if (a == "Kashmir" && b == "Nishat Garden") {
+            start = a;
+            end = b;
+            mon = 300;
+            Hour = 8;
+            Minute = 30;
+            distance = 23;
+            Duration = 0.30;
+        } else if (a == "Kashmir" && b == "Betaab Valley") {
+            start = a;
+            end = b;
+            mon = 400;
+            Hour = 9;
+            Minute = 30;
+            distance = 15;
+            Duration = 0.20;
+        } else if (a == "Kashmir" && b == "Doodhpatri") {
+            start = a;
+            end = b;
+            mon = 500;
+            Hour = 10;
+            Minute = 30;
+            distance = 5;
+            Duration = 0.15;
+        } else if (a == "Kashmir" && b == "Mumbai") {
+            start = a;
+            end = b;
+            mon = 100;
+            Hour = 11;
+            Minute = 30;
+            distance = 200;
+            Duration = 49;
+        } else if (a == "Kashmir" && b == "Raipur") {
+            start = a;
+            end = b;
+            mon = 200;
+            Hour = 12;
+            Minute = 00;
+            distance = 250;
+            Duration = 50;
+        } else if (a == "Kashmir" && b == "Leh") {
+            start = a;
+            end = b;
+            mon = 300;
+            Hour = 12;
+            Minute = 30;
+            distance = 300;
+            Duration = 52;
+        } else if (a == "Kashmir" && b == "Noida") {
+            start = a;
+            end = b;
+            mon = 400;
+            Hour = 13;
+            Minute = 30;
+            distance = 350;
+            Duration = 54;
+        } else if (a == "Kashmir" && b == "Nagpur") {
+            start = a;
+            end = b;
+            mon = 500;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+        if (a == "Shimla" && b == "Ridge") {
+            start = a;
+            end = b;
+            mon = 100;
+            Hour = 5;
+            Minute = 30;
+            distance = 2;
+            Duration = 0.10;
+        } else if (a == "Shimla" && b == "Jakhu Temple") {
+            start = a;
+            end = b;
+            mon = 200;
+            Hour = 5;
+            Minute = 00;
+            distance = 3;
+            Duration = 0.15;
+        } else if (a == "Shimla" && b == "Mall Road") {
+            start = a;
+            end = b;
+            mon = 300;
+            Hour = 6;
+            Minute = 30;
+            distance = 8;
+            Duration = 0.20;
+        } else if (a == "Shimla" && b == "Green Valley") {
+            start = a;
+            end = b;
+            mon = 400;
+            Hour = 6;
+            Minute = 00;
+            distance = 5;
+            Duration = 0.25;
+        } else if (a == "Shimla" && b == "Kufri") {
+            start = a;
+            end = b;
+            mon = 500;
+            Hour = 6;
+            Minute = 30;
+            distance = 14;
+            Duration = 0.35;
+        } else if (a == "Shimla" && b == "Christ Church") {
+            start = a;
+            end = b;
+            mon = 100;
+            Hour = 7;
+            Minute = 00;
+            distance = 4;
+            Duration = 0.15;
+        } else if (a == "Shimla" && b == "Visceral Lodge") {
+            start = a;
+            end = b;
+            mon = 200;
+            Hour = 7;
+            Minute = 30;
+            distance = 3;
+            Duration = 0.15;
+        } else if (a == "Shimla" && b == "Himalyan Birdpark") {
+            start = a;
+            end = b;
+            mon = 300;
+            Hour = 8;
+            Minute = 30;
+            distance = 23;
+            Duration = 0.30;
+        } else if (a == "Shimla" && b == "Tara Devi Temple") {
+            start = a;
+            end = b;
+            mon = 400;
+            Hour = 9;
+            Minute = 30;
+            distance = 15;
+            Duration = 0.20;
+        } else if (a == "Shimla" && b == "Kali Bari Temple") {
+            start = a;
+            end = b;
+            mon = 500;
+            Hour = 10;
+            Minute = 30;
+            distance = 5;
+            Duration = 0.15;
+        } else if (a == "Shimla" && b == "Mumbai") {
+            start = a;
+            end = b;
+            mon = 100;
+            Hour = 11;
+            Minute = 30;
+            distance = 200;
+            Duration = 49;
+        } else if (a == "Shimla" && b == "Raipur") {
+            start = a;
+            end = b;
+            mon = 200;
+            Hour = 12;
+            Minute = 00;
+            distance = 250;
+            Duration = 50;
+        } else if (a == "Shimla" && b == "Leh") {
+            start = a;
+            end = b;
+            mon = 300;
+            Hour = 12;
+            Minute = 30;
+            distance = 300;
+            Duration = 52;
+        } else if (a == "Shimla" && b == "Noida") {
+            start = a;
+            end = b;
+            mon = 400;
+            Hour = 13;
+            Minute = 30;
+            distance = 350;
+            Duration = 54;
+        } else if (a == "Shimla" && b == "Nagpur") {
+            start = a;
+            end = b;
+            mon = 500;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+        //repeated
+        else if (a == "Shimla" && b == "Orissa") {
+            start = a;
+            end = b;
+            mon = 600;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+        else if (a == "Shimla" && b == "Vizag") {
+            start = a;
+            end = b;
+            mon = 700;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+        else if (a == "Shimla" && b == "Agra") {
+            start = a;
+            end = b;
+            mon = 800;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+        else if (a == "Shimla" && b == "Bhopal") {
+            start = a;
+            end = b;
+            mon = 900;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+        else if (a == "Kashmir" && b == "Orissa") {
+            start = a;
+            end = b;
+            mon = 600;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+        else if (a == "Kashmir" && b == "Vizag") {
+            start = a;
+            end = b;
+            mon = 700;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+        else if (a == "Kashmir" && b == "Agra") {
+            start = a;
+            end = b;
+            mon = 800;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+        else if (a == "Kashmir" && b == "Bhopal") {
+            start = a;
+            end = b;
+            mon = 900;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+        else if (a == "Kashmir" && b == "Orissa") {
+            start = a;
+            end = b;
+            mon = 600;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+        else if (a == "Kashmir" && b == "Vizag") {
+            start = a;
+            end = b;
+            mon = 700;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+        else if (a == "Kashmir" && b == "Agra") {
+            start = a;
+            end = b;
+            mon = 800;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+        else if (a == "Kashmir" && b == "Bhopal") {
+            start = a;
+            end = b;
+            mon = 900;
+            Hour = 14;
+            Minute = 30;
+            distance = 400;
+            Duration = 56;
+        }
+
+
+        if (a == "Shimla" || b == "Shimla") {
+            para =
+                "Kufri,Chail,Naldehra,Mashobra,Tattapani,Solan,Barog,Narkanda,Kasauli,Rampur,Hatkoti,Sarahan,Sangla, Kinnau, Mandi";
+        }
+        else if (a == "Kashmir" || b == "Kashmir") {
+            para =
+                "Srinagar,Gulmarg,Pahalgam,Sonmarg,Leh,Kargil,Drass,Nubra Valley<br>Aharbal Waterfalls,Lolab Valley,Bangus Valley<br>Verinag Kokernag,Sinthan Top,Gurez Valley,Wular Lake.";
+        }
+        else {
+            para =
+                "Anjuna Market,Tito's nightclub, Divar island,Dona Paula,Chapora Fort<br>Baga,Calangute, Candolim, Fort Aguada,Dudhsagar waterfall";
+        }
+
+        document.getElementById("money").innerHTML = "You need to pay:" + "Rs" + mon + "/-";
+        document.getElementById("end").innerHTML = "Ending Destination:" + end;
+        document.getElementById("start").innerHTML =
+            "Starting Destination:" + start;
+        document.getElementById("Date").innerHTML = "Date:" + c;
+        document.getElementById("Time").innerHTML = "Time:" + Hour + ":" + Minute;
+        document.getElementById("distance").innerHTML =
+            "Distance:" + distance + "km";
+        document.getElementById("Duration").innerHTML =
+            "Duration:" + Duration + "Hour";
+        document.getElementById("para").innerHTML =
+            "Near by where You can also visit:<br>" + para;
+    }
+</script>
+
+
+
+
+
+</script>
+
+</html>
